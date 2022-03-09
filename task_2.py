@@ -10,23 +10,22 @@ def write_f(a):
         file.write(a)
 # write_f(a)
 
-def read_f(r):
+def read_f():
     with open('text.txt', 'r') as file:
         r=file.readlines()
     return r
-read_f(r)
+print(read_f())
+#
 
-d='Hello\nworld'
+ff=read_f()
 b=int(input('Введи 0 или 1'))
-def del_el(d,b):
-    with open('text.txt', 'r+') as file:
-        d=file.readlines()
-    # print(*d)
-    # print(d)
-    del d[b]  #удалить выбранную строку
-    # print(d)
-    return d
-del_el()
+def del_el(ff,b):
+    del ff[b]  #удалить выбранную строку
+    return ff
+print(del_el(ff,b))
+
+
+# del_el()
 # print(sd)
 # read_f(sd)
 # del sd[1]  #удалить выбранную строку
